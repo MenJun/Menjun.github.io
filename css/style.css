@@ -225,6 +225,7 @@ html, body, #fullpage{
 .head-box {
 }
 .nav-box {
+  float: right;
   display: flex;
   justify-content: flex-end;
 }
