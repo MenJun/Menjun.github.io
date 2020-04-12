@@ -76,7 +76,12 @@
  </div>
 </header>
       <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main"><article id="page-" class="article global-container article-type-page" itemscope itemprop="blogPost">
+        <section id="main">
+
+
+
+<article id="page-" class="article global-container article-type-page" itemscope itemprop="blogPost">
+
     
         <header class="article-header">
             
@@ -102,7 +107,7 @@
     
 
     <div class="article-inner">
-        
+
         <div class="article-content article-content-cloud" itemprop="articleBody">
             
                 <p>本人靓照<br>本人靓照<br>本人靓照</p>
@@ -121,7 +126,7 @@
     </div>
     
         
-        <link rel="stylesheet" href="/css/gitment.css"> 
+<!--<link rel="stylesheet" href="/css/gitment.css"> 
 <script src="/js/gitment.js"></script>
 
 <div id="gitmentContainer"></div>
@@ -137,13 +142,21 @@ var gitment = new Gitment({
 })
 gitment.render('gitmentContainer')
 </script>
-
+-->
     
-        <iframe src="https://rawcdn.githack.com/TinyJay/donate-page/51aaf216f048b8e6d5ce01443a32be930b91869d/simple/index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+      
+            <iframe src="https://rawcdn.githack.com/TinyJay/donate-page/51aaf216f048b8e6d5ce01443a32be930b91869d/simple/index.html" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no" allowtransparency="true"></iframe>
         
-            <!-- ������City�氲װ���� -->
+</article>
 
-<div id="lv-container" data-id="city" data-uid="MTAyMC80OTU4OC8yNjA3OQ==">
+
+
+    <!-- ������City�氲װ���� -->
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC80OTU4OC8yNjA3OQ==" style="  box-shadow: 1px 2px 3px #ddd;
+  border: 1px solid rgba(190, 126, 74, .3);
+  padding: 20px;
+  background: rgba(255, 255, 255, .85)">
 
 <script type="text/javascript">
    
@@ -172,9 +185,8 @@ if (typeof LivereTower === 'function')
 <noscript>Ϊ����ʹ�����������۹����뼤��JavaScript</noscript>
 </div>
 
-        
 
-</article>
+
 
 </section>
         <aside id="sidebar">
@@ -209,7 +221,7 @@ if (typeof LivereTower === 'function')
   <div class="widget-box">
     <h3 class="widget-title">标签 </h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hello/" rel="tag">Hello</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hello/" rel="tag">Hello</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
     </div>
   </div>
 
@@ -219,7 +231,7 @@ if (typeof LivereTower === 'function')
   <div class="widget-box">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hello/" rel="tag">Hello</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hello/" rel="tag">Hello</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
     </div>
   </div>
 
@@ -241,7 +253,7 @@ if (typeof LivereTower === 'function')
       <ul>
         
           <li>
-            <a href="/2020/04/12/ceshi/">ceshi</a>
+            <a href="/2020/04/12/eschar/">使用QQ空间相册生成图片外链</a>
           </li>
         
           <li>
@@ -283,12 +295,25 @@ if (typeof LivereTower === 'function')
       <footer id="footer">
   <div class="foot-box global-width">
     &copy; 2020 He meng jun &nbsp;&nbsp;
-    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
-    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
-    <br>
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+    <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
   </div>
+
+  <script>
+    var now = new Date();
+    function createtime() {
+      var grt= new Date("02/14/2018 12:49:00");//此处修改你的建站时间或者网站上线时间
+      now.setTime(now.getTime()+250);
+      days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+      hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+      if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+      mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+      seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+      snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+      document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+      document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()",250);
+  </script>
 </footer>
       <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
 <script>
