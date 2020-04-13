@@ -10,16 +10,16 @@
   
   
   
-  <meta name="description" content="CODING企业版持续集成+自动部署HEXO博客用了一段时间的GitHub Pages发现确实速度比较慢，即便优化再多也不能从根本上进行改善。于是这几天尝试在CODING企业版对本站进行持续集成+自动部署。 然后，这个过程并不顺利… 方法一：hexo d一开始我参考github actions的方法，先持续集成，接着通过hexo d命令推送到master分支，再进行自动部署。然而，最终卡在了he">
+  <meta name="description" content="CODING企业版持续集成+自动部署HEXO博客用了一段时间的GitHub Pages发现确实速度比较慢，即便优化再多也不能从根本上进行改善。于是这几天尝试在CODING企业版对本站进行持续集成+自动部署。 然后，这个过程并不顺利…">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CODING企业版持续集成+自动部署HEXO博客">
 <meta property="og:url" content="http://yoursite.com/2020/04/07/hello-world/index.html">
 <meta property="og:site_name" content="冷冷的博客">
-<meta property="og:description" content="CODING企业版持续集成+自动部署HEXO博客用了一段时间的GitHub Pages发现确实速度比较慢，即便优化再多也不能从根本上进行改善。于是这几天尝试在CODING企业版对本站进行持续集成+自动部署。 然后，这个过程并不顺利… 方法一：hexo d一开始我参考github actions的方法，先持续集成，接着通过hexo d命令推送到master分支，再进行自动部署。然而，最终卡在了he">
+<meta property="og:description" content="CODING企业版持续集成+自动部署HEXO博客用了一段时间的GitHub Pages发现确实速度比较慢，即便优化再多也不能从根本上进行改善。于是这几天尝试在CODING企业版对本站进行持续集成+自动部署。 然后，这个过程并不顺利…">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://r.photo.store.qq.com/psc?/V11rnv1t26XYl4/3pY6KhS62k*1Vm7UATlxqy8vZSusYXSOG98PYJSxhu3qap8d5.Jmbr0zYsHqMgytjjsEnW*VFZx7j75N0Vxh*0zp4Mr4.WhFlXeoQgg2xcY!/anull&bo=sAQQArAEEAIRCT4!&rf=photolist&t=5/r/_yake_qzoneimgout.png">
 <meta property="article:published_time" content="2020-04-07T10:35:57.434Z">
-<meta property="article:modified_time" content="2020-04-13T01:02:09.055Z">
+<meta property="article:modified_time" content="2020-04-13T01:04:33.512Z">
 <meta property="article:author" content="He meng jun">
 <meta property="article:tag" content="Hello">
 <meta name="twitter:card" content="summary">
@@ -129,9 +129,9 @@
 
         <div class="article-content article-content-cloud" itemprop="articleBody">
             
-                <hr>
-<p>CODING企业版持续集成+自动部署HEXO博客<br>用了一段时间的GitHub Pages发现确实速度比较慢，即便优化再多也不能从根本上进行改善。于是这几天尝试在CODING企业版对本站进行持续集成+自动部署。</p>
+                <p>CODING企业版持续集成+自动部署HEXO博客<br>用了一段时间的GitHub Pages发现确实速度比较慢，即便优化再多也不能从根本上进行改善。于是这几天尝试在CODING企业版对本站进行持续集成+自动部署。</p>
 <p>然后，这个过程并不顺利…</p>
+<a id="more"></a>
 <h3 id="方法一：hexo-d"><a href="#方法一：hexo-d" class="headerlink" title="方法一：hexo d"></a>方法一：hexo d</h3><p>一开始我参考github actions的方法，先持续集成，接着通过hexo d命令推送到master分支，再进行自动部署。然而，最终卡在了hexo d这一步。</p>
 <p>我反复搜索了网上的资料，唯一相关的一篇官方推荐文章也是这么操作的，详见：<a href>《使用 CODING 进行 Hexo 项目的持续集成》</a>，但是没有提到过SSH权限受限的问题。</p>
 <p><img src="https://r.photo.store.qq.com/psc?/V11rnv1t2fVV1f/3pY6KhS62k*1Vm7UATlxq75*WwyFfc2cA8jrVi7eo6BS7j.ePW9uN4d9nb6SxZIxaK82LWy90tt58mxiicI5heo7WumtZERstzHqC*B0Tx4!/anull&bo=dQIOAXUCDgEDCSw!&rf=photolist&t=5/r/_yake_qzoneimgout.png" alt><br>根据我的逻辑，SSH就是一对密钥，将公钥放到被推送的仓库，私钥放到持续集成的工作空间就行了。</p>
