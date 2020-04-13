@@ -19,7 +19,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://r.photo.store.qq.com/psc?/V11rnv1t26XYl4/3pY6KhS62k*1Vm7UATlxq8EYsvzQM2wDKE96wFFV0Zq.gR80z8GSO882T2B6siUeczyGkevi3L5ilE0utjQSbsjHHVFdofBm33nxHoJOEnQ!/anull&bo=sAQYArAEGAIRCT4!&rf=photolist&t=5/r/_yake_qzoneimgout.png">
 <meta property="article:published_time" content="2020-04-07T12:11:27.000Z">
-<meta property="article:modified_time" content="2020-04-13T00:16:26.702Z">
+<meta property="article:modified_time" content="2020-04-13T00:22:08.530Z">
 <meta property="article:author" content="He meng jun">
 <meta property="article:tag" content="C">
 <meta name="twitter:card" content="summary">
@@ -170,17 +170,23 @@
 <h3 id="递归思路分析："><a href="#递归思路分析：" class="headerlink" title="递归思路分析："></a>递归思路分析：</h3><p>我们设定三个柱子A,B,C。我们的目的是将环从A–&gt;C。（A为起始位置，C为目标位置）</p>
 <p>当N=1即一阶时它的路径很简单只需要从A-&gt;C进行移动。</p>
 <p>当N=2时我们需要进行三步：</p>
-<p>##1.小盘 A-&gt;B<br>(假想没有大盘只有小盘，与N=1 的步骤一样，只是目标位置变为了 B)</p>
-<p>##2.大盘 A-&gt;C<br>(大盘上面的小盘到B去了，与N=1 的步骤一样直接到C )</p>
-<p>##3.小盘 B-&gt;C<br>(大盘到了C,对于小盘而言,C可以看作无盘，与N=1 的步骤一样，只是起始位置变为 B )</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##1.小盘 A-&gt;B</span></span><br></pre></td></tr></table></figure></div>
+<p>(假想没有大盘只有小盘，与N=1 的步骤一样，只是目标位置变为了 B)</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##2.大盘 A-&gt;C</span></span><br></pre></td></tr></table></figure></div>
+<p>(大盘上面的小盘到B去了，与N=1 的步骤一样直接到C )</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##3.小盘 B-&gt;C</span></span><br></pre></td></tr></table></figure></div>
+<p>(大盘到了C,对于小盘而言,C可以看作无盘，与N=1 的步骤一样，只是起始位置变为 B )</p>
 <p>(分解一下，小盘从A通过B作为中间目标再到C。可以这样想</p>
 <p>小盘下面的大盘目标是C 所以小盘第一次目标则变成B,</p>
 <p>等到大盘到了目标C ,小盘再到C。</p>
 <p>则完成将大小盘按小盘在上大盘在下的要求移到C。）</p>
 <p>当N=3时我们需要进行七步：</p>
-<p>##1. 小盘 A-&gt;C 2.中盘 A-&gt;B 3.小盘 C-&gt;B<br>(假想没有大盘只有小盘和中盘，与N=2 的步骤一样，只是目标位置变为了 B)</p>
-<p>##4. 大盘 A-&gt;C,<br>​ (大盘上面的小盘和中盘都到B去了，与N=1 的步骤一样直接到C )</p>
-<p>##5. 小盘 B-&gt;A 6.中盘 B-&gt;C 7.小盘 A-&gt;C<br>(大盘到了C,对于小盘和中盘而言,C可以看作无盘，与N=2 的步骤一样，只是起始位置变为了 B )</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##1. 小盘 A-&gt;C 2.中盘 A-&gt;B 3.小盘 C-&gt;B</span></span><br></pre></td></tr></table></figure></div>
+<p>(假想没有大盘只有小盘和中盘，与N=2 的步骤一样，只是目标位置变为了 B)</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##4. 大盘 A-&gt;C,</span></span><br></pre></td></tr></table></figure></div>
+<p>​ (大盘上面的小盘和中盘都到B去了，与N=1 的步骤一样直接到C )</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##5. 小盘 B-&gt;A 6.中盘 B-&gt;C 7.小盘 A-&gt;C</span></span><br></pre></td></tr></table></figure></div>
+<p>(大盘到了C,对于小盘和中盘而言,C可以看作无盘，与N=2 的步骤一样，只是起始位置变为了 B )</p>
 <p>(分解一下，大盘想从A去C。但上面压着小盘与中盘 ，</p>
 <p>所以得先把他们移开 并且上面两盘不能移动到C,得移动到B 去</p>
 <p>就相当于N=2时，起始位置A到目标位置B。待大盘移动到C。</p>
@@ -190,7 +196,10 @@
 <p>每次只关心上一层，上上层是到了上一层才考虑的事——递归</p>
 <p>题目链接：<a href="http://codevs.cn/problem/3145/" target="_blank" rel="noopener">http://codevs.cn/problem/3145/</a></p>
 <hr>
-<p>#include &lt;stdio.h&gt;<br>void han(int n, char A, char B, char C){<br>    if(n == 1)printf(“%d from %c to %c\n”, n, A, C);<br>    else{<br>    //第一步  对于执行最大盘（n） 到C的操作之前<br>    han(n-1, A, C, B);<br>    //第二步  执行最大盘（n） 到C的操作<br>    printf(“%d from %c to %c\n”, n, A, C);<br>    //第三步  对于执行最大盘（n） 到C的操作之后<br>    han(n-1, B, A, C);<br>   }<br>}<br>int main()<br>{<br>    int n;<br>    scanf(“%d”, &amp;n);<br>    printf(“%d\n”, (1 &lt;&lt; n) - 1);<br>    han(n, ‘A’, ‘B’, ‘C’);<br>    return 0;<br>}</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line">void han(int n, char A, char B, char C)&#123;</span><br><span class="line">    <span class="keyword">if</span>(n == 1)<span class="built_in">printf</span>(<span class="string">"%d from %c to %c\n"</span>, n, A, C);</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">    //第一步  对于执行最大盘（n） 到C的操作之前</span><br><span class="line">    han(n-1, A, C, B);</span><br><span class="line">    //第二步  执行最大盘（n） 到C的操作 </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d from %c to %c\n"</span>, n, A, C);</span><br><span class="line">    //第三步  对于执行最大盘（n） 到C的操作之后 </span><br><span class="line">    han(n-1, B, A, C); </span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int n;</span><br><span class="line">    scanf(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, (1 &lt;&lt; n) - 1);</span><br><span class="line">    han(n, <span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>);</span><br><span class="line">    <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+
+
 
             
         </div>
