@@ -10,16 +10,16 @@
   
   
   
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+  <meta name="description" content="CODING企业版持续集成+自动部署HEXO博客用了一段时间的GitHub Pages发现确实速度比较慢，即便优化再多也不能从根本上进行改善。于是这几天尝试在CODING企业版对本站进行持续集成+自动部署。 然后，这个过程并不顺利… 方法一：hexo d一开始我参考github actions的方法，先持续集成，接着通过hexo d命令推送到master分支，再进行自动部署。然而，最终卡在了he">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello World">
 <meta property="og:url" content="http://yoursite.com/2020/04/07/hello-world/index.html">
 <meta property="og:site_name" content="冷冷的博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta property="og:description" content="CODING企业版持续集成+自动部署HEXO博客用了一段时间的GitHub Pages发现确实速度比较慢，即便优化再多也不能从根本上进行改善。于是这几天尝试在CODING企业版对本站进行持续集成+自动部署。 然后，这个过程并不顺利… 方法一：hexo d一开始我参考github actions的方法，先持续集成，接着通过hexo d命令推送到master分支，再进行自动部署。然而，最终卡在了he">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://r.photo.store.qq.com/psc?/V11rnv1t26XYl4/3pY6KhS62k*1Vm7UATlxqy8vZSusYXSOG98PYJSxhu3qap8d5.Jmbr0zYsHqMgytjjsEnW*VFZx7j75N0Vxh*0zp4Mr4.WhFlXeoQgg2xcY!/anull&bo=sAQQArAEEAIRCT4!&rf=photolist&t=5/r/_yake_qzoneimgout.png">
 <meta property="article:published_time" content="2020-04-07T10:35:57.434Z">
-<meta property="article:modified_time" content="2020-04-13T00:19:36.082Z">
+<meta property="article:modified_time" content="2020-04-13T00:58:07.547Z">
 <meta property="article:author" content="He meng jun">
 <meta property="article:tag" content="Hello">
 <meta name="twitter:card" content="summary">
@@ -130,20 +130,25 @@
         <div class="article-content article-content-cloud" itemprop="articleBody">
             
                 <hr>
-<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<a id="more"></a>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>CODING企业版持续集成+自动部署HEXO博客<br>用了一段时间的GitHub Pages发现确实速度比较慢，即便优化再多也不能从根本上进行改善。于是这几天尝试在CODING企业版对本站进行持续集成+自动部署。</p>
+<p>然后，这个过程并不顺利…</p>
+<h3 id="方法一：hexo-d"><a href="#方法一：hexo-d" class="headerlink" title="方法一：hexo d"></a>方法一：hexo d</h3><p>一开始我参考github actions的方法，先持续集成，接着通过hexo d命令推送到master分支，再进行自动部署。然而，最终卡在了hexo d这一步。</p>
+<p>我反复搜索了网上的资料，唯一相关的一篇官方推荐文章也是这么操作的，详见：<a href>《使用 CODING 进行 Hexo 项目的持续集成》</a>，但是没有提到过SSH权限受限的问题。</p>
+<p><img src="https://r.photo.store.qq.com/psc?/V11rnv1t2fVV1f/3pY6KhS62k*1Vm7UATlxq75*WwyFfc2cA8jrVi7eo6BS7j.ePW9uN4d9nb6SxZIxaK82LWy90tt58mxiicI5heo7WumtZERstzHqC*B0Tx4!/anull&bo=dQIOAXUCDgEDCSw!&rf=photolist&t=5/r/_yake_qzoneimgout.png" alt><br>根据我的逻辑，SSH就是一对密钥，将公钥放到被推送的仓库，私钥放到持续集成的工作空间就行了。</p>
+<p>而coding的持续集成是通过调用凭据来进行验证的，但是这么设置后依然无效。</p>
+<p><img src="https://r.photo.store.qq.com/psc?/V11rnv1t2fVV1f/3pY6KhS62k*1Vm7UATlxq7m*O9IqBm8uqcci2dNR9cJyiTHNg7gZwgjMyZYeWBaTwp.BAhINh8641rc94X5K6cpfTJWhqSgsbUBEC5lyXyw!/anull&bo=3gXXAd4F1wEDCSw!&rf=photolist&t=5/r/_yake_qzoneimgout.png" alt></p>
+<p>思考过后，我觉得可能是密钥的生成方式有问题，因为我并不是在持续集成的工作空间生成的，而是通过外部cloud studio用ssh-keygen -f命令生成一对密钥。（但github也是如此操作的，却有效）</p>
+<p>最终我尝试切换到https方式推送，却忘记了git密码…话说这个密码究竟是啥？难道不是coding账户的密码吗？也没找到忘记和重置密码的资料。</p>
+<p>于是方法一无疾而终…</p>
+<p>###方法二：项目令牌<br>这里参考的方法是：<a href="https://nobige.cn/post/20191007-coding_chi_xu_ji_cheng_bu_shu_hexo_bo_ke/" target="_blank" rel="noopener">《coding持续集成部署hexo博客》</a></p>
+<p>与前文的区别是，这里去掉了hexo d的步骤，而是通过项目令牌的方式直接将public文件夹推送到master分支。</p>
+<p>并且这里用到了docker的方式，具体原理我就不清楚了。</p>
+<p>不过，只要参考原文的步骤，确实能实现持续集成+自动部署的目的。</p>
+<p>持续集成记录：</p>
+<p><img src="https://r.photo.store.qq.com/psc?/V11rnv1t2fVV1f/3pY6KhS62k*1Vm7UATlxq0TWI4y.e5MAAh1eN*zxjPLp9Hs7J8o6*8NsrawSJ1L2k8.1Arf8XAItQYBVfhjLgNve1GeDafW02.M3SWF7n4E!/anull&bo=KQMSAikDEgIDCSw!&rf=photolist&t=5/r/_yake_qzoneimgout.png" alt><br>只是目前耗时较长，github那边只要1分钟就能完成。</p>
+<p>自动部署记录：</p>
+<p><img src="https://r.photo.store.qq.com/psc?/V11rnv1t2fVV1f/3pY6KhS62k*1Vm7UATlxq1UlgHfiPVqrlrF0CDSzvB10qnKmwwnU*jTUg1R1h8VJwjCF0h3DozieOtAgBLjkOhVAYZhGivXkqCJqPGL2vkI!/anull&bo=ogQtAaIELQEDCSw!&rf=photolist&t=5/r/_yake_qzoneimgout.png" alt></p>
+<h3 id="后语"><a href="#后语" class="headerlink" title="后语"></a>后语</h3><p>最后要吐槽的一点是，coding pages的二级域名为什么不是用户名，而是随机生成的一串字符？</p>
 
             
         </div>
